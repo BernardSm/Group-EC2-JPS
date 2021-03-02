@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var repeat = 4;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row" style="align-content:space-evenly">
+    @for (var r = 0; r < repeat; r++)
+    {
+        <div class="col-md-3 mb-5">
+            <h5 class="justify-content-center">Get the MyJPS Mobile App</h5>
+            <div class="jps-image-frame">
+                <div class="jps-blur-rapper">
+                    <img loading="lazy" width="230" height="205" src="~/img/Web-Tiles-Mobile-App-1.jpg" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="text-center">
+    <h2 class="text-primary" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight:lighter;">Latest News</h2>
+</div>
+

@@ -1,0 +1,40 @@
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\appsettings.json
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.exe
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.deps.json
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.runtimeconfig.json
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.runtimeconfig.dev.json
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.dll
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\ref\GW JPS.dll
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.pdb
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.Views.dll
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\bin\Debug\net5.0\GW JPS.Views.pdb
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.csprojAssemblyReference.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.AssemblyInfoInputs.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.AssemblyInfo.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.csproj.CoreCompileInputs.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.RazorAssemblyInfo.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.RazorAssemblyInfo.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\staticwebassets\GW JPS.StaticWebAssets.Manifest.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\staticwebassets\GW JPS.StaticWebAssets.xml
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\scopedcss\bundle\GW JPS.styles.css
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.TagHelpers.input.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.TagHelpers.output.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.RazorCoreGenerate.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.RazorTargetAssemblyInfo.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.RazorTargetAssemblyInfo.cs
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.Views.pdb
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.dll
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\ref\GW JPS.dll
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.pdb
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.genruntimeconfig.cache
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.csproj.CopyComplete
