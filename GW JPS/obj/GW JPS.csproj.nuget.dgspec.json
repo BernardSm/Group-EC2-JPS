@@ -1,32 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\smith\\Desktop\\Utech\\Enterprise Computing 2\\Class Projects\\GW JPS\\GW JPS\\GW JPS.csproj": {}
+    "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\smith\\Desktop\\Utech\\Enterprise Computing 2\\Class Projects\\GW JPS\\GW JPS\\GW JPS.csproj": {
+    "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\smith\\Desktop\\Utech\\Enterprise Computing 2\\Class Projects\\GW JPS\\GW JPS\\GW JPS.csproj",
+        "projectUniqueName": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
         "projectName": "GW JPS",
-        "projectPath": "C:\\Users\\smith\\Desktop\\Utech\\Enterprise Computing 2\\Class Projects\\GW JPS\\GW JPS\\GW JPS.csproj",
-        "packagesPath": "C:\\Users\\smith\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\smith\\Desktop\\Utech\\Enterprise Computing 2\\Class Projects\\GW JPS\\GW JPS\\obj\\",
+        "projectPath": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
+        "packagesPath": "C:\\Users\\joden\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\smith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joden\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net50"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net50": {
             "projectReferences": {}
           }
         },
@@ -37,27 +36,13 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "net50": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.113\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
         }
       }
     }

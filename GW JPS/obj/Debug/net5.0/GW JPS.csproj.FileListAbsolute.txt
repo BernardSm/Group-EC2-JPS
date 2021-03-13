@@ -38,3 +38,4 @@ C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.pdb
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.genruntimeconfig.cache
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\GW JPS\obj\Debug\net5.0\GW JPS.csproj.CopyComplete
+C:\Users\joden\Source\Repos\Group-EC2-JPS\GW JPS\obj\Debug\net5.0\GW JPS.pdb
