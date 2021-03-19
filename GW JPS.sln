@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GW JPS", "GW JPS\GW JPS.csproj", "{9D4B4521-FCDC-4A1F-9D74-1D45C5DEC040}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BFE1A8C-AD48-4A27-B76D-DFB6CBBFF004} = {1BFE1A8C-AD48-4A27-B76D-DFB6CBBFF004}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC2_NBC", "EC2_NBC\EC2_NBC.csproj", "{1BFE1A8C-AD48-4A27-B76D-DFB6CBBFF004}"
 EndProject

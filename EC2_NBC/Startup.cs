@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using EC2_NBC.Data;
 
 namespace EC2_NBC
 {
@@ -24,6 +26,9 @@ namespace EC2_NBC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<EC2_NBCContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("EC2_NBCContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
