@@ -30,7 +30,7 @@ namespace EC2_NBC.ViewModels
         [Required(ErrorMessage = "Enter Account Number")]
         [DataType(DataType.CreditCard)]
         [RegularExpression(@"^[9505]+[0-9]{12}", ErrorMessage = "Enter a 12 digit card number starting with 9505")]
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
         public string AccountType { get; set; }
     }

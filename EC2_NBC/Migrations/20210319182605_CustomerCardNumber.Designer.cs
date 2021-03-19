@@ -3,14 +3,16 @@ using EC2_NBC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EC2_NBC.Migrations
 {
     [DbContext(typeof(EC2_NBCContext))]
-    partial class EC2_NBCContextModelSnapshot : ModelSnapshot
+    [Migration("20210319182605_CustomerCardNumber")]
+    partial class CustomerCardNumber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
