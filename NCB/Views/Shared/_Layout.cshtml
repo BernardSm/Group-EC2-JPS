@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        <div class="wrapper">
+            <div class="menu">
+                <ul>
+                    <li class="navigation_first_item"><a>Home</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a href="@Url.Action("Index","Customers")">Customer Information</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="content">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+            <div class="clear"></div>
+            <footer>
+                <div class="footer">
+                    <h2>Copyright &copy; National Commercial Bank @DateTime.Now.Year</h2>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/alertify.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

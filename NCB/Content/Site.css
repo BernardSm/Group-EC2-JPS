@@ -1,0 +1,118 @@
+﻿body, div, p, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(237,237,237);
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.wrapper {
+    width: 950px;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+    background-color: rgb(254,254,254);
+    border: 1px solid rgb(254, 254,254);
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-height: 400px;
+}
+
+.menu {
+    background-color: rgb(10,110,178);
+    width: 100%;
+    margin: 0px 0px 10px;
+    padding: 0px;
+    height: 40px;
+    color: rgb(243,243,243);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.navigation_first_item {
+    border-left: 0px;
+    /*-moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;*/
+    border-radius: 5px 0 0 5px;
+}
+
+.navitem_s {
+    float: left;
+    border-right: 1px solid rgb(10, 85, 125);
+    border-left: 1px solid rgb(67,153, 200);
+    height: 40px;
+    background-color: rgb(14, 79,114);
+}
+
+.menu ul {
+}
+
+    .menu ul li {
+        float: left;
+        display: block;
+        list-style: none;
+        border-right: 1px solid rgb(10,85,125);
+        border-left: 1px solid rgb(67, 153, 200);
+    }
+
+        .menu ul li.navigation_first_item:hover {
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .menu ul li a {
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 40px;
+            padding: 8px 20px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .menu ul li:hover {
+            background-color: rgb(14, 79, 114);
+            border-right: 1px solid rgb(14, 89, 130);
+        }
+
+.clear {
+    clear: both;
+}
+
+/*Footer*/
+.footer {
+    height: 50px;
+    background-color: rgb(10, 110, 178);
+    color: rgb(255,255,255);
+    border-radius: 5px 5px 5px 5px;
+}
+
+    .footer h2 {
+        padding: 15px;
+        text-align: center;
+    }
+
+.form-body{
+    background : rgb(255, 216, 0);
+    padding: 20px 40px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(19, 35, 47, 0);
+}
+.form-body input, textarea{
+    font-size: 20px;
+}
+textarea:focus,input:focus{
+    outline: none;
+}
+.table-heading {
+    background-color: #2a3843;
+    color: white;
+}
+.add-new{
+    background-color: #1ab188;
+}

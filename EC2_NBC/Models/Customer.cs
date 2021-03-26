@@ -23,14 +23,14 @@ namespace EC2_NBC.Models
         [DataType(DataType.Currency)]
         public float Balance { get; set; }
 
-        [Required(ErrorMessage = "Enter Account Number")]
-        [RegularExpression(@"^[0-9]{7}", ErrorMessage = "Enter 7 digit number")]
+        [Required(ErrorMessage = "Enter Account Number"),MaxLength(7)]
+        [RegularExpression(@"^[0-9]{7}", ErrorMessage = "Enter a 7 digit number")]
         [DataType(DataType.CreditCard)]
         public int AccountNumber { get; set; }
 
-        [Required(ErrorMessage = "Enter Account Number")]
+        [Required(ErrorMessage = "Enter Account Number"),MaxLength(12)]
         [DataType(DataType.CreditCard)]
-        [RegularExpression(@"^[9505]+[0-9]{12}", ErrorMessage = "Enter a 12 digit card number starting with 9505")]
+        [RegularExpression(@"^[9505]+[0-9]{11}", ErrorMessage = "Enter a 12 digit card number starting with 9505")]
         public string CardNumber { get; set; }
 
         public string AccountType { get; set; }

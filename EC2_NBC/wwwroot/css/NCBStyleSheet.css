@@ -95,3 +95,8 @@ body {
         padding: 15px;
         text-align: center;
     }
+
+    .table-heading{
+        background-color : gold;
+        color: white;
+    }
