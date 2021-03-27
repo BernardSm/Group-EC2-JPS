@@ -7,8 +7,9 @@
 <br />
 
 <p>
-    <a href="@Url.Action("AddorEdit","Customers")" class="btn btn-default"><i class="fa fa-plus"></i>Create New</a>
+    <a href="@Url.Action("AddorEdit","Customers")" class="btn btn-default"><i class="fa fa-plus"></i> Create New</a>
 </p>
+<br />
 <table class="table table-striped">
     <thead class="table-heading">
         <tr>
@@ -55,7 +56,7 @@
             @Html.DisplayFor(modelItem => item.AccountType)
         </td>
         <td>
-            <a href="@Url.Action("AddorEdit","Customers", new { id = item.UserID})" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>
+            <a href="@Url.Action("AddorEdit","Customers", new { id = item.UserID})" class="btn btn-default"><i class="fa fa-pen"></i> Edit</a>
             <a onclick="Delete(@item.UserID)" class="btn btn-default"><i class="fa fa-trash"></i> Delete</a>
         </td>
     </tr>

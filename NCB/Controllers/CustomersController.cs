@@ -19,6 +19,7 @@ namespace NCB.Controllers
             return View(cusList);
         }
 
+        [HttpGet]
         public ActionResult AddorEdit(int id = 0)
         {
             if(id==0)
