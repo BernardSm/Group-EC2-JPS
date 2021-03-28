@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NCB_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NCB_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="UserID" />
@@ -17,11 +17,31 @@
           <Property Name="CardNumber" Type="varchar" MaxLength="12" />
           <Property Name="AccountType" Type="varchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCB_DB.dbo.Teller' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Teller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar(max)" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Username" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityContainer Name="NCB_DBModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teller" EntityType="Self.Teller" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Teller].[Id] AS [Id], 
+[Teller].[FirstName] AS [FirstName], 
+[Teller].[LastName] AS [LastName], 
+[Teller].[Age] AS [Age], 
+[Teller].[Username] AS [Username]
+FROM [dbo].[Teller] AS [Teller]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NCB_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -39,7 +59,18 @@
         </EntityType>
         <EntityContainer Name="NCB_DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Tellers" EntityType="NCB_DBModel.Teller" />
         </EntityContainer>
+        <EntityType Name="Teller">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -56,6 +87,17 @@
                 <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
                 <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
                 <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tellers">
+            <EntityTypeMapping TypeName="NCB_DBModel.Teller">
+              <MappingFragment StoreEntitySet="Teller">
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -7,7 +7,7 @@
 <br />
 
 <p>
-    <a href="@Url.Action("AddorEdit","Customers")" class="btn btn-default"><i class="fa fa-plus"></i> Create New</a>
+    <a href="@Url.Action("AddorEdit","Customers")" class="btn btn-default"><i class="fa fa-plus"></i> Add New Customer</a>
 </p>
 <br />
 <table class="table table-striped">
@@ -74,8 +74,8 @@
 
         function Delete(id) {
             alertify.confirm('National Commercial Bank', 'Are You Sure You Want to Delete this Record ?', function () {
-            window/location.href = '@Url.Action("Delete","Customers")/' + id;
-            },null )
+               var window = location.href = '@Url.Action("Delete","Customers")/' + id;
+            }, null);
                 
         }
     </script>

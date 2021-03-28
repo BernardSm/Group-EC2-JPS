@@ -19,7 +19,7 @@ namespace NCB.Controllers
             return View(cusList);
         }
 
-        [HttpGet]
+       
         public ActionResult AddorEdit(int id = 0)
         {
             if(id==0)
@@ -30,7 +30,6 @@ namespace NCB.Controllers
                 return View(response.Content.ReadAsAsync<mvcCustomerModel>().Result);
             }
         }
-
         [HttpPost]
         public ActionResult AddorEdit(mvcCustomerModel cus)
         {

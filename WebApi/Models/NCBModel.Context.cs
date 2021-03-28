@@ -26,5 +26,6 @@ namespace WebApi.Models
         }
     
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Teller> Tellers { get; set; }
     }
 }
