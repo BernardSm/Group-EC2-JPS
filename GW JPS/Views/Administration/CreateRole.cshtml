@@ -1,0 +1,22 @@
+﻿@model GW_JPS.ViewModels.CreateRoleViewModel
+
+@{
+    ViewData["Title"] = "Create New Role";
+}
+
+
+<div class="card col-md-6 shadow-sm" style="padding:15px; align-self:center">
+    <h4 class="card-subtitle text-muted">Create New Role</h4>
+
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RoleName"></label>
+                <input asp-for="RoleName" class="form-control">
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Role</button>
+        </form>
+    </div>
+</div>

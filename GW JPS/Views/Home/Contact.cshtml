@@ -1,0 +1,57 @@
+﻿@model GW_JPS.ViewModels.ContactViewModel
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+<div style="width:100%">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.1498864732275!2d-76.74587338591815!3d18.01824628770346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb3ed77252d65f%3A0xbe483695dda08fef!2sUniversity%20of%20Technology%2C%20Jamaica!5e0!3m2!1sen!2sjm!4v1583277156093!5m2!1sen!2sjm" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div>
+                <div class="col-md-6 float-lg-right">
+                    <h2 style="text-transform:capitalize">Address</h2>
+                    <p class="text-sm-left">237 Old Hope Road<br />Kingston 6<br />Jamaica W.I.</p>
+
+                    <h2 style="text-transform:capitalize">Call us</h2>
+                    <p><strong>+1(876)6758904</strong></p>
+                </div>
+                <div class="col-md-6" style="display:block">
+                    <h2 style="text-transform:capitalize">Contact form</h2>
+
+                    <div class="form-group">
+                        <label asp-for="FirstName"></label>
+                        <input asp-for="FirstName" class="form-control" placeholder="Jane">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LastName"></label>
+                        <input asp-for="LastName" class="form-control" placeholder="Doe">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" placeholder="jdoe@mail.com">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Subject"></label>
+                        <input asp-for="Subject" class="form-control" placeholder="Info on vehicle">
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Message"></label>
+                        <input asp-for="Message" class="form-control">
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

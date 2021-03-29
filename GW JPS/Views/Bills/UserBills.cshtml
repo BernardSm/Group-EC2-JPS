@@ -1,0 +1,128 @@
+﻿@model GW_JPS.ViewModels.UserBillsViewModel
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+
+        <h2>User's Bills</h2>
+
+        <div class="mt-3">
+            <div class="row form-group">
+                <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Id" disabled class="form-control" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Email" disabled class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group">
+                <label asp-for="PremisesNumber" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="PremisesNumber" disabled class="form-control" />
+                    <span asp-validation-for="PremisesNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="row form-group">
+                <div class="col-sm-10">
+                    <!--<button type="submit" class="btn btn-primary">Create Bill to be implemented</button>-->
+                    <a asp-action="Create"  asp-route-id="@Model.Id" class="btn btn-primary">Create Bill</a>
+                    <a asp-controller="Administration" asp-action="ListUsers" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4>Bills</h4>
+                </div>
+                <div class="card-body">
+
+                    @if (Model.Bills.Any())
+                    {
+                        foreach (var bill in Model.Bills)
+                        {
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Id
+                                        </th>
+                                        <th>
+                                            Generation Date
+                                        </th>
+                                        <th>
+                                            Due Date
+                                        </th>
+                                        <th>
+                                            Amount
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => bill.Id)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => bill.GenerationDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => bill.DueDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => bill.Amount)
+                                        </td>
+                                        <td>
+                                            <form asp-action="Delete" asp-route-id="@bill.Id" method="post">
+                                                <a asp-action="Edit" asp-route-id="@bill.Id" class="btn btn-primary">Edit</a>
+                                                <a asp-action="Details" asp-route-id="@bill.Id" class="btn btn-primary">Details</a>
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-@bill.Id">Delete</button>
+
+                                                <div class="modal fade bd-example-modal-@bill.Id" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                Are you sure you want to delete bill : @bill.Id
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                                                <button type="submit" class="btn btn-danger">Yes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                    }
+                    else
+                    {
+                        <h6 class="card-title">None at the moment</h6>
+                    }
+                </div>
+                <div class="card-footer">
+                    <!--<a asp-action="ManageUserRoles" asp-route-userId="@Model.Id" style="width:auto;" class="btn btn-primary">
+                        Manage Roles
+                    </a>-->
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

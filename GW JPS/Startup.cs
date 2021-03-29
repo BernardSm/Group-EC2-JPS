@@ -8,6 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using GW_JPS.Data;
+using Microsoft.AspNetCore.Identity;
+using GW_JPS.Models;
 
 namespace GW_JPS
 {
@@ -24,6 +28,15 @@ namespace GW_JPS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<GW_JPSContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("GW_JPSContext")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => {
+                options.Password.RequiredLength = 8;
+                options.Password.RequiredUniqueChars = 3;
+            })
+                    .AddEntityFrameworkStores<GW_JPSContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +54,8 @@ namespace GW_JPS
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseRouting();
 
