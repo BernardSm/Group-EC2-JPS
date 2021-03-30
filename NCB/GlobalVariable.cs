@@ -13,7 +13,7 @@ namespace NCB
 
         static GlobalVariable()
         {
-            WebApiClient.BaseAddress = new Uri("https://localhost:44394/api/");
+            WebApiClient.BaseAddress = new Uri("https://localhost:44310/api/");
             WebApiClient.DefaultRequestHeaders.Clear();
             WebApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
