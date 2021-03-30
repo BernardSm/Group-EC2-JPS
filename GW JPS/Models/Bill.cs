@@ -33,5 +33,8 @@ namespace GW_JPS.Models
         [Required]
         [DataType(DataType.Currency)]
         public decimal Amount { get; set; }
+
+        [StringLength(4)]
+        public string Status { get; set; }
     }
 }

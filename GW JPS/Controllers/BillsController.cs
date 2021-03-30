@@ -138,13 +138,6 @@ namespace GW_JPS.Controllers
                 return NotFound();
             }
 
-            var testBill = await _context.Bill.FindAsync(id);
-
-            if (testBill.CustomerId == bill.CustomerId || testBill.PremisesNumber == bill.PremisesNumber)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try

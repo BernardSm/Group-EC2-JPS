@@ -41,6 +41,13 @@ namespace GW_JPS.Controllers
 
                 if (result.Succeeded)
                 {
+                    result = await UserManager.AddToRoleAsync(user, "User");
+                    if (!result.Succeeded)
+                    {
+                        ModelState.AddModelError("", "Cannot add selected roles to user");
+                        return View(model);
+                    }
+
                     if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                     {
                         return RedirectToAction("ListUsers", "Administration");

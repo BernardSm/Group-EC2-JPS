@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="UserBills" class="btn btn-secondary">Back to List</a>
+                <a asp-action="UserBills" asp-route-id="@Model.CustomerId" class="btn btn-secondary">Back to List</a>
             </div>
         </form>
     </div>
