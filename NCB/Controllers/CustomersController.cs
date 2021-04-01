@@ -30,6 +30,7 @@ namespace NCB.Controllers
                 return View(response.Content.ReadAsAsync<mvcCustomerModel>().Result);
             }
         }
+        
         [HttpPost]
         public ActionResult AddorEdit(mvcCustomerModel cus)
         {
@@ -46,7 +47,7 @@ namespace NCB.Controllers
            
             return RedirectToAction("Index");
         }
-
+        
         public ActionResult Delete(int id)
         {
             HttpResponseMessage response = GlobalVariable.WebApiClient.DeleteAsync("Customers/"+id.ToString() ).Result;
