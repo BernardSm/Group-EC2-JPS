@@ -26,7 +26,7 @@ namespace EC2_NBC.Models
         [Required(ErrorMessage = "Enter Account Number"),MaxLength(7)]
         [RegularExpression(@"^[0-9]{7}", ErrorMessage = "Enter a 7 digit number")]
         [DataType(DataType.CreditCard)]
-        public int AccountNumber { get; set; }
+        public string AccountNumber { get; set; }
 
         [Required(ErrorMessage = "Enter Account Number"),MaxLength(12)]
         [DataType(DataType.CreditCard)]
