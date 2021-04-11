@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineWebApi", "OnlineWebAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiCore", "WebApiCore\WebApiCore.csproj", "{3E4454AE-61F5-40C8-8AAC-BBE80001B477}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCBWebApp", "..\..\..\Desktop\EC2\NCBWebApp\NCBWebApp\NCBWebApp.csproj", "{8502475F-4C5B-40F6-A6CF-4B0A046327F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCBWebApp", "..\..\..\Desktop\EC2\NCBWebApp\NCBWebApp\NCBWebApp.csproj", "{D12A8A34-74B8-4760-B247-2344589264F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{3E4454AE-61F5-40C8-8AAC-BBE80001B477}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E4454AE-61F5-40C8-8AAC-BBE80001B477}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E4454AE-61F5-40C8-8AAC-BBE80001B477}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8502475F-4C5B-40F6-A6CF-4B0A046327F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8502475F-4C5B-40F6-A6CF-4B0A046327F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8502475F-4C5B-40F6-A6CF-4B0A046327F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8502475F-4C5B-40F6-A6CF-4B0A046327F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12A8A34-74B8-4760-B247-2344589264F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12A8A34-74B8-4760-B247-2344589264F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12A8A34-74B8-4760-B247-2344589264F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12A8A34-74B8-4760-B247-2344589264F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
