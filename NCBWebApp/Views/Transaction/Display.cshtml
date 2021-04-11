@@ -1,0 +1,43 @@
+﻿@model IEnumerable<NCBWebApp.Models.AccountTransaction>
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h1>Customer Transactions</h1>
+
+
+<table class="table table-striped">
+    <thead class="table-heading">
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            
+            
+        </tr>
+}
+    </tbody>
+</table>

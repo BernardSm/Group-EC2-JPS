@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {}
+    "C:\\Users\\joden\\source\\repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {
+    "C:\\Users\\joden\\source\\repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
+        "projectUniqueName": "C:\\Users\\joden\\source\\repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
         "projectName": "GW JPS",
-        "projectPath": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
+        "projectPath": "C:\\Users\\joden\\source\\repos\\Group-EC2-JPS\\GW JPS\\GW JPS.csproj",
         "packagesPath": "C:\\Users\\joden\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joden\\Source\\Repos\\Group-EC2-JPS\\GW JPS\\obj\\",
+        "outputPath": "C:\\Users\\joden\\source\\repos\\Group-EC2-JPS\\GW JPS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joden\\AppData\\Roaming\\NuGet\\NuGet.Config",
