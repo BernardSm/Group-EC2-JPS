@@ -1,0 +1,15 @@
+﻿@model ErrorViewModel
+
+@if (ViewBag.ErrorTitle == null)
+{
+    <h3>
+        An error occured while processing your request.
+        The support team is notified and we are working on the fix
+    </h3>
+    <h5>Please contact us on contact@jps.com</h5>
+}
+else
+{
+    <h2 class="text-danger">@ViewBag.ErrorTitle</h2>
+    <h6 class="text-danger">@ViewBag.ErrorMessage</h6>
+}

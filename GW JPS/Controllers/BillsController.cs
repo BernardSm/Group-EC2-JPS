@@ -18,6 +18,8 @@ namespace GW_JPS.Controllers
     {
         private readonly GW_JPSContext _context;
         private readonly UserManager<ApplicationUser> userManager;
+        NCBPaymentServiceReference.NCBPaymentClient client = new NCBPaymentServiceReference.NCBPaymentClient();
+        
 
         public BillsController(GW_JPSContext context, UserManager<ApplicationUser> userManager)
         {
@@ -214,6 +216,25 @@ namespace GW_JPS.Controllers
             };
 
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Payment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async void Payment(BillPaymentViewModel model)
+        {
+            if (model.CardNumber.StartsWith("9505"))
+            {
+                await client.NCBAsync(model.CardNumber);
+            }
+            else if(model.CardNumber.StartsWith("4001"))
+            {
+                await client.NCBAsync(model.CardNumber);
+            }
         }
 
         [Authorize(Roles = "Admin")]

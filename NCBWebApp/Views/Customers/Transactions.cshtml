@@ -1,0 +1,86 @@
+﻿@inject UserManager<ApplicationUser> userManager;
+@model NCBWebApp.ViewModels.CustomerTransactionViewModel
+
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+
+        <h2>User Transactions</h2>
+
+
+        @if (Model.Transactions.Count != 0)
+        {
+            <div class="card mb-3">
+                <div class="card-header">
+                    User Name : @Model.Name
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead class="table-heading">
+                            <tr>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Amount
+                                </th>
+                                <th>
+                                    Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Transactions)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TransactionDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Amount)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TransactionType)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    @if (User.IsInRole("Teller"))
+                    {
+                        <a asp-action="Withdraw" asp-route-id="@Model.Id" class="btn btn-primary">Withdraw</a>
+                        <a asp-action="Deposit" asp-route-id="@Model.Id" class="btn btn-primary">Deposit</a>
+                        <a asp-action="Index" class="btn btn-primary text-light float-right">Back</a>
+                    }
+                    else if (User.IsInRole("Customer"))
+                    {
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary text-light float-right">Back</a>
+                    }
+                </div>
+            </div>
+
+        }
+        else
+        {
+            <div class="card">
+                <div class="card-header">
+                    No transactions for this user.
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Use the buttons below to perform a transaction.
+                    </h5>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Withdraw" asp-route-id="@Model.Id" class="btn btn-primary">Withdraw</a>
+                    <a asp-action="Transactions" asp-route-id="@Model.Id" class="btn btn-primary">Deposit</a>
+                </div>
+            </div>
+        }
+    </main>
+</div>
