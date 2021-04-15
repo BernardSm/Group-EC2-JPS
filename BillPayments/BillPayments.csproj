@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NCBPayment.svc" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="INCBPayment.cs" />
@@ -89,11 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

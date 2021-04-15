@@ -1,0 +1,71 @@
+﻿@model IEnumerable<BNS.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionAmount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TransactionID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TransactionID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TransactionID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

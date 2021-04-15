@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BNS.Models.Customer>
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<BNS.Models.Identity.AppUser> signInManager;
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/viewCard.css" rel="stylesheet" />
+<h1>View All Customers</h1>
+
+<div class="cards">
+    @foreach (var item in Model)
+    {
+        int value;
+        @if (item.AccountType == "Saving")
+        {
+            value = 1;
+        }
+        else
+        {
+            value = 2;
+        }
+        <div class="card" style="margin:auto">
+            <main class="grid">
+                <article>
+                    <a asp-action="GetAccount" asp-route-id="@item.UserId">
+                        <img class="card-img-top" src="~/images/NoImageresize.png" alt="Sample photo">
+                    </a>
+                    <div class="text">
+                        <div class="card-content">
+                            <p class="category category__+@value">@Html.DisplayFor(modelItem => item.AccountType)s   Account</p><br />
+                            <h2>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </h2>
+                            <p style="text-align: center;">
+                                @Html.DisplayFor(modelItem => item.userEmail)<br />
+                                AC - @Html.DisplayFor(modelItem => item.AccountNumber)
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+            <div class="card-footer text-center">
+
+                @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-primary" asp-action="EditAccount" asp-route-id="@item.UserId">Edit</a>
+                    <a class="btn btn-primary" asp-action="GetAccount" asp-route-id="@item.UserId">View</a>
+                    <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                }
+
+                @if (signInManager.IsSignedIn(User) && User.IsInRole("Teller"))
+                {
+                    <a class="btn btn-primary" asp-action="CustomerTransaction" asp-route-id="@item.UserId">View Transaction</a>
+                    <a class="btn btn-primary" asp-action="Withdraw" asp-route-id="@item.UserId">Withdrawal</a>
+                    <a class="btn btn-primary" asp-action="Deposit" asp-route-id="@item.UserId">Deposit</a>
+                }
+            </div>
+        </div>
+    }>
+</div>

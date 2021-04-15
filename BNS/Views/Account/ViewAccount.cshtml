@@ -1,0 +1,175 @@
+﻿@model BNS.Models.Customer
+
+@{
+    ViewData["Title"] = "Account Information";
+}
+
+<div>
+    <a asp-action="EditAccount" asp-controller="Account">Edit Account</a> |
+    <a asp-action="Index" asp-controller="Account">Home</a>
+</div>
+
+
+<div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-sm-10"><h1>@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h1></div>
+        <div class="col-sm-2"><a href="#" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="~/images/company.jpg"></a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+
+            <div class="text-center">
+                <img src="~/images/NoImageresize.png" class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
+            <hr><br>
+        </div>
+
+        <div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" aria-expanded="true" href="#home">Personal Information</a></li>
+                <li><a data-toggle="tab" href="#pass">Credentials</a></li>
+                <li><a data-toggle="tab" href="#acc">Account Info</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.FirstName)
+                            </h4>
+                            @Html.DisplayFor(model => model.FirstName)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.LastName)
+                            </h4>
+                            @Html.DisplayFor(model => model.LastName)
+                        </div>
+                    </div>
+
+                    <br /><br />
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.StreetName)
+                            </h4>
+                            @Html.DisplayFor(model => model.StreetName)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.City)
+                            </h4>
+                            @Html.DisplayFor(model => model.City)
+                        </div>
+                    </div>
+
+                    <br /><br />
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.Parish)
+                            </h4>
+                            @Html.DisplayFor(model => model.Parish)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.Country)
+                            </h4>
+                            @Html.DisplayFor(model => model.Country)
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="pass">
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.userEmail)
+                            </h4>
+                            @Html.DisplayFor(model => model.userEmail)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.userPassword)
+                            </h4>
+                            @Html.DisplayFor(model => model.userPassword)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.userConfirmedPassword)
+                            </h4>
+                            YES
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="acc">
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.AccountNumber)
+                            </h4>
+                            @Html.DisplayFor(model => model.AccountNumber)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.CardNumber)
+                            </h4>
+                            @Html.DisplayFor(model => model.CardNumber)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.AccountType)
+                            </h4>
+                            @Html.DisplayFor(model => model.AccountType)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <h4>
+                                @Html.DisplayNameFor(model => model.Balance)
+                            </h4>
+                            @Html.DisplayFor(model => model.Balance)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

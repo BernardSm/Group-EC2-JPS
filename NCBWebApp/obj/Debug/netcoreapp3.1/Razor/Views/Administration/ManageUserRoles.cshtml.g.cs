@@ -34,7 +34,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c22868db406eb49003e6c4c1d294c6db6a5acc24", @"/Views/Administration/ManageUserRoles.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d55cd892ffce6becb78023ba2b8a202c0562d848", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4090404c510106eca0658ad077a0b30234abbd99", @"/Views/_ViewImports.cshtml")]
     public class Views_Administration_ManageUserRoles : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<NCBWebApp.ViewModels.UserRolesViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

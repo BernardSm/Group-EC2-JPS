@@ -34,7 +34,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6ca030bc63bbe95f42272d7822551758c6fb5ec8", @"/Views/Customers/Transactions.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d55cd892ffce6becb78023ba2b8a202c0562d848", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4090404c510106eca0658ad077a0b30234abbd99", @"/Views/_ViewImports.cshtml")]
     public class Views_Customers_Transactions : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<NCBWebApp.ViewModels.CustomerTransactionViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Withdraw", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<BNS.Models.Identity.AppUser> signInManager;
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ScotiaBank</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/Custom.css" rel="stylesheet" />
+    <link href="~/css/viewCard.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <img src="~/images/scotialogo.png" width="170" height="30" />
+                <!--<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ScotiaBank</a>-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        @if (signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <form method="post" asp-action="logout" asp-controller="account">
+                                    <button type="submit" class="nav-link btn btn-link py-0">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <!--The Login page should go here-->
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="display: flex; justify-content: center;">
+            @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+            {
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Manage Administration
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a asp-area="" asp-controller="Admin" asp-action="Create">Create Admin</a></li>
+                        <li><a asp-area="" asp-controller="Admin" asp-action="CreateRole">Create Roles</a></li>
+                        <li><a asp-area="" asp-controller="Admin" asp-action="ListRoles">List Roles</a></li>
+                        <li><a asp-area="" asp-controller="Admin" asp-action="ListUsers">List Users</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Manage Customers
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a asp-area="" asp-controller="Customers" asp-action="Index">View All Customers</a></li>
+                        <li><a asp-area="" asp-controller="Customers" asp-action="Create">Create Customers</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Manage Tellers
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a asp-area="" asp-controller="Tellers" asp-action="Index">View All Tellers</a></li>
+                        <li><a asp-area="" asp-controller="Tellers" asp-action="Create">Create Tellers</a></li>
+                    </ul>
+                </div>
+            }
+            else if (signInManager.IsSignedIn(User) && User.IsInRole("Teller"))
+            {
+                <input type="button" value="View All Customer" onclick="location.href='@Url.Action("Index", "Customer")'" />
+                <input type="button" value="View All Transactions" onclick="location.href='@Url.Action("AllTransaction", "Customer")'" />
+            }
+            else if (signInManager.IsSignedIn(User) && User.IsInRole("Customer"))
+            {
+                <input type="button" value="View Profile" onclick="location.href='@Url.Action("ViewAccount", "Account")'" />
+                <input type="button" value="View Transactions" onclick="location.href='@Url.Action("Index", "Account")'" />
+                <input type="button" value="Edit Personal Info" onclick="location.href='@Url.Action("EditAccount", "Account")'" />
+            }
+        </div>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ScotiaBank - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

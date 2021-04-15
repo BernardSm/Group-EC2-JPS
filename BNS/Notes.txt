@@ -1,0 +1,74 @@
+﻿To Do
+	-Admin 
+		+Edit customer page (App user not updating)
+		+Teller(CRUD) complete edit
+		C
+		R
+		U
+		D
+		+Register should be a contact us type of page
+
+	-Teller
+		+View Transaction
+		+Withdraw
+		+View all customer
+		+Deposit
+
+	-Customer
+		+Transaction //to be done, named index
+
+		Teller Views
+		Customer Views
+
+
+
+
+
+		if(ModelState.IsValid)
+            {
+                try
+                {
+                    var data = await _context.Customer.Where(obj1 => obj1.AccountNumber == obj.AccountNumber).FirstOrDefaultAsync();
+                    if (obj.Balance <= data.Balance)
+                    {
+                        data.Balance -= obj.Balance;
+                        AccountTransaction transaction = new AccountTransaction
+                        {
+                            CusId = obj.Id,
+                            Amount = obj.Balance,
+                            TransactionDate = DateTime.Now,
+                            TransactionType = "Withdraw"
+
+                        };
+                        _context.Transaction.Add(transaction);
+                        int mess = _context.SaveChanges();
+                        if (mess == 1)
+                        {
+                            ViewBag.data = "Withdraw Completed";
+                            _context.SaveChanges();
+                        }
+                        else
+                        {
+                            ViewBag.data = "Withdraw Failed";
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.data = "Insufficient Funds Available";
+                    }
+                }
+                catch(DbUpdateConcurrencyException)
+                {
+                    if (!CustomerExists(obj.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(obj);
+        }

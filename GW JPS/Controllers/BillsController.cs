@@ -225,16 +225,19 @@ namespace GW_JPS.Controllers
         }
 
         [HttpPost]
-        public async void Payment(BillPaymentViewModel model)
+        public IActionResult Payment(BillPaymentViewModel model)
         {
             if (model.CardNumber.StartsWith("9505"))
             {
-                await client.NCBAsync(model.CardNumber);
+                //await client.NCBAsync(model.CardNumber);
+                return View();
             }
             else if(model.CardNumber.StartsWith("4001"))
             {
-                await client.NCBAsync(model.CardNumber);
+                //await client.NCBAsync(model.CardNumber);
+                return View();
             }
+            return View();
         }
 
         [Authorize(Roles = "Admin")]

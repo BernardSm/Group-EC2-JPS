@@ -1,0 +1,54 @@
+﻿@model BNS.Models.Teller
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Teller</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TellerId" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userEmail" class="control-label"></label>
+                <input asp-for="userEmail" class="form-control" />
+                <span asp-validation-for="userEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userPassword" class="control-label"></label>
+                <input asp-for="userPassword" class="form-control" />
+                <span asp-validation-for="userPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userConfirmedPassword" class="control-label"></label>
+                <input asp-for="userConfirmedPassword" class="form-control" />
+                <span asp-validation-for="userConfirmedPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

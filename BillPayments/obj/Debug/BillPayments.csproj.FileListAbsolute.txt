@@ -1,4 +1,3 @@
-C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\bin\BillPayments.dll.config
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\bin\BillPayments.dll
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\bin\BillPayments.pdb
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\bin\Newtonsoft.Json.dll
@@ -14,3 +13,4 @@ C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPa
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\obj\Debug\BillPayments.csproj.CopyComplete
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\obj\Debug\BillPayments.dll
 C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\obj\Debug\BillPayments.pdb
+C:\Users\smith\Desktop\Utech\Enterprise Computing 2\Class Projects\GW JPS\BillPayments\bin\BillPayments.dll.config
