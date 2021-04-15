@@ -1,0 +1,54 @@
+﻿@model NCBWebApp.ViewModels.CustomerWithdrawViewModel
+
+@{ ViewData["Title"] = "Withdraw"; }
+
+<h1>Customer Withdraw</h1>
+
+<hr />
+<div class="form-body">
+    <div class="col-md-8">
+        <form asp-action="Withdraw">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input readonly asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input readonly asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input  readonly asp-for="AccountNumber" class="form-control" />
+                <span asp-validation-for="AccountNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CardNumber" class="control-label"></label>
+                <input readonly asp-for="CardNumber" class="form-control" />
+                <span asp-validation-for="CardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountType" class="control-label"></label>
+                <input readonly asp-for="AccountType" class="form-control" />
+                <span asp-validation-for="AccountType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WithdrawalAmount" class="control-label"></label>
+                <input asp-for="WithdrawalAmount" class="form-control" />
+                <span asp-validation-for="WithdrawalAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="WITHDRAW" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

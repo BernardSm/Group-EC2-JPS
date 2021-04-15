@@ -1,0 +1,65 @@
+﻿@model ApplicationUser
+
+@{ ViewData["Title"] = "Index"; }
+
+<h1>Customer Information</h1>
+
+<form method="post" class="mt-3">
+    <div class="row form-group">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Name" disabled class="form-control" />
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Email" readonly class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Address" readonly class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="Balance" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Balance" readonly class="form-control" />
+            <span asp-validation-for="Balance" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="AccountNumber" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="AccountNumber" readonly class="form-control" />
+            <span asp-validation-for="AccountNumber" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="CardNumber" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="CardNumber" readonly class="form-control" />
+            <span asp-validation-for="CardNumber" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label asp-for="AccountType" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="AccountType" readonly class="form-control" />
+            <span asp-validation-for="AccountType" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row form-group">
+        <div class="col-sm-10">
+            <a asp-action="Transactions" class="btn btn-primary">Transactions</a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</form>

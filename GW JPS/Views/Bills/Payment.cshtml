@@ -1,0 +1,22 @@
+﻿@model GW_JPS.ViewModels.BillPaymentViewModel
+
+@{
+    ViewData["Title"] = "User Bill Payment";
+}
+
+<h3>Enter your card number and accounr number</h3>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CardNumber"></label>
+                <input asp-for="CardNumber" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <span asp-validation-for="CardNumber" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Make Payment</button>
+        </form>
+    </div>
+</div>
